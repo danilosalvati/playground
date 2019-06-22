@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service worker sharing</title>
+</head>
+<script src="service-worker.js"></script>
+<script type="application/javascript" src="service-worker-client.js"></script>
+
+<script type="application/javascript">
+    let data = new Date().toString();
+    stateToServiceWorker(data);
+</script>
+
+<body>
+<div>Message <span id="message"></span></div>
+</body>
+</html>
