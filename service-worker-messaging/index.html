@@ -8,11 +8,15 @@
 <script type="application/javascript" src="service-worker-client.js"></script>
 
 <script type="application/javascript">
-    let data = new Date().toString();
-    stateToServiceWorker(data);
+    setTimeout(() => {
+        let data = new Date().toString();
+        stateToServiceWorker(data);
+    }, 2000)
 </script>
 
 <body>
+<h1>Client 1</h1>
+<a href="client2.html" target="_blank">Open client 2</a>
 <div>Message <span id="message"></span></div>
 </body>
 </html>
