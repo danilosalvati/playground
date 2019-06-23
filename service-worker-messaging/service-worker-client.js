@@ -18,6 +18,7 @@ if ('serviceWorker' in navigator) {
             navigator.serviceWorker.addEventListener('message', function (event) {
                 console.log('Receiving data');
                 console.log(event.data)
+                document.getElementById('message').innerText = event.data;
             });
 
         }).catch(function (error) {

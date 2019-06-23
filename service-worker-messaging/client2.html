@@ -4,7 +4,21 @@
     <meta charset="UTF-8">
     <title>Service worker messaging - Client 2</title>
 </head>
+
+<script type="application/javascript" src="service-worker-client.js"></script>
+
+<script type="application/javascript">
+    setTimeout(() => {
+        stateToServiceWorker('getRemoteData');
+    }, 2000)
+
+    window.resetCache = () => {
+        stateToServiceWorker('resetRemoteData');
+    }
+</script>
+
 <body>
 <h1>Client 2</h1>
+<div>Message <span id="message"></span></div>
 </body>
 </html>
